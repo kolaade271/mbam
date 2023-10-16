@@ -1,12 +1,8 @@
 
 import loago1 from  "../images/mbamlogo1.png";
-import Tabs, { Tab } from 'react-best-tabs';
-import 'react-best-tabs/dist/index.css';
-
 
 const HeaderLandingPage = () => {
   return (
-    <div>
     <nav className="navbar navbar-expand-lg ">
     <div className="container-fluid custom-container ">
     <a className="navbar-brand logotext " href="/">
@@ -31,8 +27,7 @@ const HeaderLandingPage = () => {
         </div>
       </div>
     </div>
-  </nav> 
-  </div>
+  </nav>
   );
 };
 
