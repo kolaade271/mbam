@@ -31,9 +31,7 @@ const HeaderLandingPage = () => {
         </div>
       </div>
     </div>
-  </nav>
- 
-  
+  </nav> 
   </div>
   );
 };
