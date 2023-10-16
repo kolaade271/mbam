@@ -1,0 +1,57 @@
+.screenshot-2023-08-19-at-548 {
+  position: relative;
+  width: 64px;
+  height: 65px;
+  object-fit: cover;
+}
+.dev-mbam-market {
+  position: relative;
+  line-height: 140%;
+}
+.screenshot-2023-08-19-at-548-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+}
+.user-add-alt-icon1 {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+.user-add-alt-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.sign-out-circle-icon1 {
+  position: relative;
+  width: 30.03px;
+  height: 30.03px;
+}
+.frame-parent,
+.macbook-pro-16-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.macbook-pro-16-2 {
+  background-color: #37474f;
+  width: 1728px;
+  height: 96px;
+  overflow: hidden;
+  flex-shrink: 0;
+  align-items: center;
+  padding: 15px 39px 16px;
+  box-sizing: border-box;
+  gap: 936px;
+  text-align: left;
+  font-size: 23px;
+  color: #fff;
+  font-family: Poppins;
+}
