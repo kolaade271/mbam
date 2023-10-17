@@ -13,7 +13,7 @@ const LandingPage = () => {
     <div className="">
        <HeaderLandingPage/>
        
-      <div className="container custom-container">
+      <div className="wid">
       <Tabs activeTab="1" className="mt-3" ulClassName="" activityClassName="bg-success" onClick={(event, tab) => console.log(event, tab)} >
     <Tab title={<> <div>
       <FontAwesomeIcon icon={faHomeAlt} />
@@ -22,7 +22,7 @@ const LandingPage = () => {
     <div className="mbamlogo">
         <img src={mbamlarge} alt="logo" className="img-fluid " />
       </div>
-      <div className="justify-content-center btmhome ">
+      <div className="justify-content-center btmhome " align="center">
   <button type="button" class=" flex btn btn-warning btn-lg btn-block btnd">Via Login to respective user platform</button>
 <button type="button" class="btn btn-warning btn-lg btn-block btnd">Via Login to Marketplace </button>
 <button type="button" class="btn btn-warning btn-lg btn-block btnd">Link to CiBP </button>
