@@ -11,47 +11,49 @@ import { faHomeAlt, faStore, faFileInvoice } from '@fortawesome/free-solid-svg-i
 const LandingPage = () => {
   return (
     <div className="">
-       <HeaderLandingPage/>
-       
+      <HeaderLandingPage />
+
       <div className="wid">
-      <Tabs activeTab="1" className="mt-3" ulClassName="" activityClassName="bg-success" onClick={(event, tab) => console.log(event, tab)} >
-    <Tab title={<> <div>
-      <FontAwesomeIcon icon={faHomeAlt} />
-      <span> Home</span>
-    </div></>} className="mr-3">
-    <div className="mbamlogo">
-        <img src={mbamlarge} alt="logo" className="img-fluid " />
-      </div>
-      <div className="justify-content-center btmhome " align="center">
-  <button type="button" class=" flex btn btn-warning btn-lg btn-block btnd">Via Login to respective user platform</button>
-<button type="button" class="btn btn-warning btn-lg btn-block btnd">Via Login to Marketplace </button>
-<button type="button" class="btn btn-warning btn-lg btn-block btnd">Link to CiBP </button>
-  
-  
-</div>
-     </Tab>
- 
-     <Tab title={<> <div>
-      <FontAwesomeIcon icon={faStore} />
-      <span> Categories</span>
-    </div></>} className="mr-3">
-          <div className="mt-3">
+        <Tabs activeTab="1" className="mt-3" ulClassName="" activityClassName="bg-success" onClick={(event, tab) => console.log(event, tab)} >
+          <Tab title={<> <div>
+            <FontAwesomeIcon icon={faHomeAlt} />
+            <span> Home</span>
+          </div></>} className="mr-3">
+            <div className="mbamlogo">
+              <img src={mbamlarge} alt="logo" className="img-fluid " />
+            </div>
+            <div className="justify-content-center btmhome " align="center">
+              <div className="row">
+                <div className="col-md-4"><button type="button" class=" flex btn btn-warning btn-lg btn-block btnd">Via Login to respective user platform</button></div>
+                <div className="col-md-4"><button type="button" class=" flex btn btn-warning btn-lg btn-block btnd">Via Login to Marketplace </button></div>
+                <div className="col-md-4"><button type="button" class=" flex btn btn-warning btn-lg btn-block btnd">Link to CiBP</button></div>
+              </div>
+
+
+            </div>
+          </Tab>
+
+          <Tab title={<> <div>
+            <FontAwesomeIcon icon={faStore} />
+            <span> Categories</span>
+          </div></>} className="mr-3">
+            <div className="mt-3">
               Tab 2 content
-           </div>
-      </Tab>
- 
-      <Tab title={<> <div>
-      <FontAwesomeIcon icon={faFileInvoice} />
-      <span> Information</span>
-    </div></>} className="mr-3">
-          <div className="mt-3">
+            </div>
+          </Tab>
+
+          <Tab title={<> <div>
+            <FontAwesomeIcon icon={faFileInvoice} />
+            <span> Information</span>
+          </div></>} className="mr-3">
+            <div className="mt-3">
               Tab 3 content
-          </div>
-      </Tab>
-</Tabs>
-    
-   
-    </div>
+            </div>
+          </Tab>
+        </Tabs>
+
+
+      </div>
     </div>
   );
 };

@@ -1,9 +1,9 @@
 
 import loago1 from "../images/mbamlogo1.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {  faSignIn, faUser } from '@fortawesome/free-solid-svg-icons'
+import {  faShoppingCart, faSignIn, faSignOut, faUser } from '@fortawesome/free-solid-svg-icons'
 
-const HeaderLandingPage = () => {
+const HeaderDashboardPage = () => {
   return (
     <nav className="navbar navbar-expand-lg ">
       <div className="container-fluid custom-container ">
@@ -20,10 +20,13 @@ const HeaderLandingPage = () => {
           <div className="d-flex">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/register"><FontAwesomeIcon icon={faUser} /> Register</a>
+                <a className="nav-link active" aria-current="page" href="/register"><FontAwesomeIcon icon={faUser} /> Notification</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/login"><FontAwesomeIcon icon={faSignIn} /> Login</a>
+                <a className="nav-link" href="/login"><FontAwesomeIcon icon={faShoppingCart} /> Shopping cart</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/login"><FontAwesomeIcon icon={faSignOut} /> Logout</a>
               </li>
             </ul>
           </div>
@@ -33,4 +36,4 @@ const HeaderLandingPage = () => {
   );
 };
 
-export default HeaderLandingPage;
+export default HeaderDashboardPage;
