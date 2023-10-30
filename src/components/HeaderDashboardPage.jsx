@@ -1,7 +1,7 @@
 
 import loago1 from "../images/mbamlogo1.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {  faShoppingCart, faSignIn, faSignOut, faUser } from '@fortawesome/free-solid-svg-icons'
+import {  faShoppingCart, faSignOut, faUser } from '@fortawesome/free-solid-svg-icons'
 
 const HeaderDashboardPage = () => {
   return (

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/Register';
-import DashboardPage from './pages/Dashboard';
+import DashboardPage from './pages/MainPage';
 
 
 

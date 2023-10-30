@@ -11,7 +11,7 @@ const HeaderTabsComponent = ({ activeTab, onTabClick, tabContent }) => {
           <FontAwesomeIcon icon={faDashboard} />
           <span> Dashboard</span>
         </div>}
-      >
+      > 
         {tabContent.dashboard}
       </Tab>
 
