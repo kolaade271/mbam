@@ -24,7 +24,7 @@ const PaymentAuth = () => {
                 <div className="col-md-12">
                     <div className="card">
                         <div className="card-header maind">
-                            <div className="">
+                            <div className="tablewrapper">
                                 <table className="table ">
                                     <thead>
                                         <tr>
