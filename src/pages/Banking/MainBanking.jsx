@@ -8,10 +8,10 @@ import BankingIndex from './BankingIndex';
 import PaypalTopup from './PaypalTop';
 import Cashout from './Cashout';
 import PaymentAuth from './Payment';
-
+import BillPayment from './BillPayment';
 const MainBanking = () => {
   const location = useLocation();
-  const [selectedItem, setSelectedItem] = useState('maindata');
+  const [selectedItem, setSelectedItem] = useState(null);
 
   useEffect(() => {
     let page = "maindata"; 
@@ -30,7 +30,7 @@ const MainBanking = () => {
     <div className="main">
       <div className="row">
         <div className="col-md-4">
-          <BankingLeftComponent />
+          <BankingLeftComponent /> 
         </div>
         <div className="col-md-8">
         {selectedItem === 'maindata' && <BankingIndex/>}
@@ -38,8 +38,8 @@ const MainBanking = () => {
           {selectedItem === 'paymentAuth' &&<PaymentAuth/>}
           {selectedItem === 'cashout' &&<Cashout/>}
           {selectedItem === 'paypalTopup' &&<PaypalTopup/>}
+          {selectedItem === 'billpayment' &&<BillPayment/>}
           
-          {selectedItem === 'marketplace' && <div>Display Marketplace content here</div>}
         </div>
       </div>
     </div>

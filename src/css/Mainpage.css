@@ -107,7 +107,7 @@ th {
     font-weight: 400;
     line-height: 140%;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .listp {
@@ -141,6 +141,7 @@ th {
     font-size: 15px;
 }
 
+
 .balinf2 {
     padding: 1px 42px 27px 30px;
     font-weight: 500;
@@ -151,6 +152,12 @@ th {
 .green {
     font-style: normal;
     font-weight: 700;
+    line-height: 140%;
+    color: #028374;
+}
+
+.green2 {
+    font-style: normal;
     line-height: 140%;
     color: #028374;
 }
@@ -186,7 +193,7 @@ td.credit {
 }
 
 table tr .tr {
-    margin: 50px;
+    margin: 10px;
 }
 
 .sendhead {
@@ -225,6 +232,7 @@ table tr .tr {
     color: white;
     margin: 10px;
     padding: 10px 10px;
+    min-width: 100px;
 
 }
 
@@ -235,6 +243,15 @@ table tr .tr {
     border-radius: 5px;
     border: 1px solid rgba(2, 131, 116, 0.30);
     background: rgba(164, 206, 201, 0.50);
+}
+
+
+.shopinput {
+    margin: 20px;
+    margin-bottom: -10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
 }
 
 .pbody {
@@ -255,6 +272,357 @@ table tr .tr {
     font-style: normal;
     font-weight: 600;
 }
-.ppay{
+
+.ppay {
     margin: 15px;
 }
+
+.dashleft {
+    margin: 30px 10px 10px 10px;
+}
+
+.bilsds {
+    border-radius: 10px;
+    border: 1px solid rgba(57, 57, 57, 0.20);
+    background: #F6F6F6;
+    box-shadow: 0px 0px 3px 0px rgba(57, 57, 57, 0.25);
+    min-width: 250px;
+    max-width: 300px;
+    height: 62px;
+    flex-shrink: 0;
+    margin-bottom: 30px;
+}
+
+.form-label2 {
+    color: var(--light-black, #393939);
+
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    min-width: 300px;
+}
+
+
+.bilsform {
+    border-radius: 10px;
+    min-width: 250px;
+    max-width: 300px;
+    height: 62px;
+    flex-shrink: 0;
+    margin-bottom: 30px;
+}
+
+.rowdbil {
+    cursor: pointer;
+    margin: 5px;
+    padding-top: 15px;
+    color: var(--bold-black-color, #262626);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%,
+
+}
+
+.bfd {
+    background-color: var(--App-icon-colors, #EAA813);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.centered {
+    margin: 3px;
+    justify-content: center;
+    align-items: center;
+}
+
+.formbill {
+    min-width: 300px;
+    border-radius: 10px;
+    border: 1px solid rgba(57, 57, 57, 0.20);
+    background: #F6F6F6;
+    box-shadow: 0px 0px 3px 0px rgba(57, 57, 57, 0.25);
+}
+
+.hdtitle {
+    margin: 10px;
+}
+
+.pot {
+    cursor: pointer;
+}
+
+
+.rowdm {
+    display: flex;
+    justify-content: center;
+}
+
+
+.biltrxsuccess {
+    display: flex;
+    width: 396px;
+    padding: 73px 61px 33px 61px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 1px 4px 20px 0px rgba(39, 59, 74, 0.15);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.elem {
+    color: #028374;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.sucname {
+    margin: 30px;
+    color: #028374;
+
+    text-align: center;
+    /* H5 Bold Semi Bold */
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    /* 32.2px */
+}
+
+
+.paydetails {
+    width: 396px;
+    border-radius: 10px;
+    border: 1px solid rgba(54, 71, 79, 0.30);
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 140%;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--bold-black-color, #262626);
+    margin-bottom: 30px;
+}
+
+.shophead {
+    color: var(--bold-black-color, #262626);
+
+    /* H4 Medium */
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 39.2px */
+}
+
+.filtershop {
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.ttexx {
+    color: var(--bold-black-color, #262626);
+    padding-top: 15px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    /* 26.6px */
+}
+
+.marketcardb {
+    position: relative;
+    border-radius: 10px 10px 0px 0px;
+    background: #EBE1CE;
+    min-height: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-market {
+    margin-top: 15px;
+    min-width: 180px;
+    outline-color: #FFF;
+    border-color: #FFF;
+
+}
+
+
+
+.marketimg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.marktfooter {
+    border-radius: 0px 0px 10px 10px;
+    background: #FFF;
+    box-shadow: 0px -5px 40px 0px rgba(0, 0, 0, 0.15);
+}
+
+.dtext {
+    color: var(--bold-black-color, #262626);
+
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 32.2px */
+}
+
+.rate {
+    color: #EAA813;
+    font-size: 25px;
+}
+
+.cardamt {
+    color: var(--bold-black-color, #262626);
+    padding-top: 5px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    /* 22.4px */
+}
+
+.badge-market {
+    background: var(--Button-color, #36474F);
+    font-size: 9px;
+    max-width: 70px;
+}
+
+.addnewb {
+    color: #FFF;
+    border-radius: 10px;
+    background: var(--Button-color, #36474F);
+}
+
+.producticon {}
+
+
+
+.pheader {
+    padding: 100px;
+}
+
+.custom-table-header.pheader {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.custom-table-cell.pbodyd {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.btn.adnewb,
+.btn.adnewb:hover {
+    margin-bottom: 10px;
+    background: var(--Button-color, #36474F);
+    color: white;
+}
+
+.smattx {
+    color: rgba(57, 57, 57, 0.50);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 22.4px */
+}
+
+.saledate {
+    color: var(--bold-black-color, #262626);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    /* 32.2px */
+    margin-top: 10px;
+    padding-bottom: 15px;
+}
+
+.manuals {
+    width: 20%;
+    margin-top: 50px;
+}
+
+.card-categories {
+    margin-bottom: 30px;
+    min-height: 250px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.listcat {
+    color: #000;
+    margin: 5px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 200%;
+    cursor: pointer;
+}
+.profile-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .upload-icon-container {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+  }
+  .upload-icon{
+    border-radius: 50%;
+  }
+  
+  .profileimg {
+    border-radius: 50%;
+    border: 3px solid #EAA813;
+    min-width: 150px;
+    min-height: 150px;
+    display: block; /* Ensure the image is treated as a block element */
+  }
+  .profilename{
+    padding-top: 10px;
+    color: var(--light-black, #393939);
+font-size: 28px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 56px */
+  }
+
+  .bagedverified{
+    color: #028374;
+font-family: Poppins;
+font-size: 10px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 21px */
+border-radius: 10px;
+padding: 3px;
+background: rgba(2, 131, 116, 0.15);
+  }
+
+  .profile-header{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }

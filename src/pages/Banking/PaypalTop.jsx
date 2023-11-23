@@ -32,7 +32,7 @@ const PaypalTopup = () => {
 
                             <div className="row">
                                 <div className="col-md-5"></div>
-                                <br/>
+                                <br />
                                 <div className="col-md-7 d-flex justify-content-between align-items-center">
                                     <span></span>
                                     <button className="btn rgbutton">

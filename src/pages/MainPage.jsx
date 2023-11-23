@@ -5,6 +5,7 @@ import HeaderTabsComponent from "../components/HeaderTabs";
 import HeaderDashboardPage from '../components/HeaderDashboardPage';
 import DashboardComponent from '../components/pages/DashboardComponent';
 import MainBanking from './Banking/MainBanking';
+import MainMarket from './Marketplace/MainMarket';
 import "../css/Mainpage.css";
 
 const DashboardPage = () => {
@@ -35,8 +36,8 @@ const DashboardPage = () => {
   const tabContent = {
     dashboard: <div><DashboardComponent data={stage} /></div>,
     banking: <div><MainBanking page="main"/></div>,
-    marketplace: <div>Content for Information Tab in Bill Page</div>,
-    personal: <div>Content for Information Tab in Bill Page</div>,
+    marketplace: <div><MainMarket page="market"/></div>,
+    personal: <div>Content for Information Tab in Bill Pagxe</div>,
   };
 
   return (
