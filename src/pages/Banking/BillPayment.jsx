@@ -72,7 +72,7 @@ const BillPayment = () => {
                                             <div className="bilsds" onClick={() => handleBillStageeClick('Electricity')}>
                                                 <div className="row rowdbil">
                                                     <div className="col-md-2 col-3">
-                                                        <div className='bfd'>
+                                                         <div className='bfd'>
                                                             <svg className='centered' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                                                 <path d="M13 18.5H11V21.5H13V18.5Z" fill="white" />
                                                                 <path d="M5 10.5H2V12.5H5V10.5Z" fill="white" />

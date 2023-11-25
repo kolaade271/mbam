@@ -580,49 +580,169 @@ table tr .tr {
     line-height: 200%;
     cursor: pointer;
 }
+
 .profile-container {
     position: relative;
     display: inline-block;
-  }
-  
-  .upload-icon-container {
+}
+
+.upload-icon-container {
     position: absolute;
     bottom: 0;
     right: 10px;
-  }
-  .upload-icon{
+}
+
+.upload-icon {
     border-radius: 50%;
-  }
-  
-  .profileimg {
+}
+
+.profileimg {
     border-radius: 50%;
     border: 3px solid #EAA813;
     min-width: 150px;
     min-height: 150px;
-    display: block; /* Ensure the image is treated as a block element */
-  }
-  .profilename{
+    display: block;
+    /* Ensure the image is treated as a block element */
+}
+
+.profilename {
     padding-top: 10px;
     color: var(--light-black, #393939);
-font-size: 28px;
-font-style: normal;
-font-weight: 600;
-line-height: 140%; /* 56px */
-  }
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    /* 56px */
+}
 
-  .bagedverified{
+.bagedverified {
     color: #028374;
-font-family: Poppins;
-font-size: 10px;
-font-style: normal;
-font-weight: 400;
-line-height: 140%; /* 21px */
-border-radius: 10px;
-padding: 3px;
-background: rgba(2, 131, 116, 0.15);
-  }
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 21px */
+    border-radius: 10px;
+    padding: 3px;
+    background: rgba(2, 131, 116, 0.15);
+}
 
-  .profile-header{
+.profile-header {
     padding-top: 20px;
     padding-bottom: 20px;
-  }
+}
+
+.dtexhead {
+    padding: 20px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 32.2px */
+}
+
+.smdl {
+    font-size: 10px;
+
+}
+
+.mainnew {
+    margin: 20px;
+}
+
+.editor {
+    min-height: 200px;
+}
+
+.yellow {
+    color: #EAA813;
+}
+
+.proudctuicon {
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.cartimg {
+    margin-top: 30px;
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.cartrod {
+    border-radius: 10px;
+    background: #DBDBDB;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.cartamt {
+    border-radius: 100px;
+    background: #EAA813;
+    color: #FFF;
+    padding: 3px;
+}
+
+.carttitle {
+    margin-top: 20px;
+    color: #262626;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    /* 56px */
+}
+
+.cartsub {
+    margin-top: 10px;
+    width: 85%;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 32.2px */
+}
+
+.cartbuttion {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 10%;
+    border-radius: 10px;
+    border: 3px solid rgba(57, 57, 57, 0.50);
+    background: #FFF;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.cartinput {
+    width: 60px;
+    max-height: 40px;
+}
+
+.check {
+    border-radius: 10px;
+    background: #3939394D;
+    color: white;
+    width: 100%;
+}
+
+.check2 {
+    border-radius: 10px;
+    color: white;
+    background: var(--Button-color, #36474F);
+    width: 100%;
+}
+
+.tmsa{
+    color: var(--bold-black-color, #262626);
+
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%;
+}
+.df{
+    background: white;
+}

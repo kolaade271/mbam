@@ -7,7 +7,13 @@ const MarketLeftComponent = () => {
     const navigate = useNavigate();
 
     const handleItemClick = (page, tab) => {
-        navigate(`/dashboard`, { state: { page, tab } });
+        if(page === "cart"){
+            navigate(`/cart`, { state: { page, tab } });
+        }
+        else{
+            navigate(`/dashboard`, { state: { page, tab } });
+        }
+       
     };
 
     return (
@@ -36,7 +42,7 @@ const MarketLeftComponent = () => {
                         <elem className="listp">Categories</elem>
                     </div>
 
-                    <div className="col-md-12 list-li" onClick={() => handleItemClick('cashout', '3')}>
+                    <div className="col-md-12 list-li" onClick={() => handleItemClick('cart', '3')}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 35 33" fill="none">
                             <path d="M1 7.78125H33.9C33.9552 7.78125 34 7.82602 34 7.88125V31.9C34 31.9552 33.9552 32 33.9 32H1.1C1.04477 32 1 31.9552 1 31.9V7.78125ZM1 7.78125L29.995 1.02857C30.0577 1.01397 30.1176 1.06157 30.1176 1.12597V7.5875" stroke="#262626" stroke-width="2" />
                         </svg>
@@ -50,7 +56,7 @@ const MarketLeftComponent = () => {
                         <elem className="listp">My Purchases</elem>
                     </div>
 
-                    <div className="col-md-12 list-li" onClick={() => handleItemClick('PayPalpayment', '3')}>
+                    <div className="col-md-12 list-li" onClick={() => handleItemClick('messages', '3')}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 35 33" fill="none">
                             <path d="M1 7.78125H33.9C33.9552 7.78125 34 7.82602 34 7.88125V31.9C34 31.9552 33.9552 32 33.9 32H1.1C1.04477 32 1 31.9552 1 31.9V7.78125ZM1 7.78125L29.995 1.02857C30.0577 1.01397 30.1176 1.06157 30.1176 1.12597V7.5875" stroke="#262626" stroke-width="2" />
                         </svg>
@@ -83,7 +89,7 @@ const MarketLeftComponent = () => {
                         <elem className="listp">My Sales</elem>
                     </div>
 
-                    <div className="col-md-12 list-li" onClick={() => handleItemClick('billpayment', '3')}>
+                    <div className="col-md-12 list-li" onClick={() => handleItemClick('delieverymethod', '3')}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 35 33" fill="none">
                             <path d="M1 7.78125H33.9C33.9552 7.78125 34 7.82602 34 7.88125V31.9C34 31.9552 33.9552 32 33.9 32H1.1C1.04477 32 1 31.9552 1 31.9V7.78125ZM1 7.78125L29.995 1.02857C30.0577 1.01397 30.1176 1.06157 30.1176 1.12597V7.5875" stroke="#262626" stroke-width="2" />
                         </svg>

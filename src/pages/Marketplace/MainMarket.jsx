@@ -9,6 +9,8 @@ import Mysale from './Mysale';
 import Categories from './Categories';
 import Mypurchase from './Mypurchase';
 import Settings from './Settings';
+import Delieverymethod from './Delieverymethod';
+import Messages from './messages';
 
 const MainMarket = () => {
   const location = useLocation();
@@ -34,19 +36,15 @@ const MainMarket = () => {
           <MarketLeftComponent />
         </div>
         <div className="col-md-8">
-        {/* {selectedItem === 'maindata' && <Shop/>} */}
-          {/* {selectedItem === 'sendmoney' &&<Sendmoney/>}
-          {selectedItem === 'paymentAuth' &&<PaymentAuth/>}
-          {selectedItem === 'cashout' &&<Cashout/>}
-          {selectedItem === 'paypalTopup' &&<PaypalTopup/>}
-          {selectedItem === 'billpayment' &&<BillPayment/>} */}
-          
+        {selectedItem === 'maindata' &&<Mysale/>}
          {selectedItem === 'mysale' &&<Mysale/>}
          {selectedItem === 'mypurchase' &&<Mypurchase/>}
          {selectedItem === 'myproduct' &&<Myproduct/>}
          {selectedItem === 'categories' &&<Categories/>}
           {selectedItem === 'marketplace' && <Shop/>}
           {selectedItem === 'settings' && <Settings/>}
+          {selectedItem === 'delieverymethod' && <Delieverymethod/>}
+          {selectedItem === 'messages' && <Messages/>}
 
         </div>
       </div>

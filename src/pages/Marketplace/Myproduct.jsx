@@ -1,9 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import "../../css/LandingPage.css";
 import "../../css/Mainpage.css";
 import samplet from "../../images/samplet.png"
 
 const Myproduct = () => {
+
+    const navigate = useNavigate();
+    const handleClick = (data) => {
+        navigate(`/newprouct`, { state: { data} });
+    };
 
     return (
         <div className="main">
@@ -14,7 +20,7 @@ const Myproduct = () => {
                             <div className="row">
                                 <div className="col-md-6">My product</div>
                                 <div className="col-md-6 pull-right" style={{ textAlign: 'right' }}>
-                                    <button className="btn btn-success adnewb">Add New</button>
+                                    <button className="btn btn-success adnewb"  onClick={() => handleClick('addnew')}>Add New</button>
                                 </div>
                             </div>
                         </div>
