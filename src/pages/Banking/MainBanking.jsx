@@ -9,6 +9,7 @@ import PaypalTopup from './PaypalTop';
 import Cashout from './Cashout';
 import PaymentAuth from './Payment';
 import BillPayment from './BillPayment';
+import MoneyInout from './Moneyinout';
 const MainBanking = () => {
   const location = useLocation();
   const [selectedItem, setSelectedItem] = useState(null);
@@ -29,14 +30,15 @@ const MainBanking = () => {
   return (
     <div className="main">
       <div className="row">
-        <div className="col-md-4">
+        <div className="col-md-4 leftnav">
           <BankingLeftComponent /> 
         </div>
-        <div className="col-md-8">
+        <div className="col-md-8 maindash">
         {selectedItem === 'maindata' && <BankingIndex/>}
           {selectedItem === 'sendmoney' &&<Sendmoney/>}
           {selectedItem === 'paymentAuth' &&<PaymentAuth/>}
           {selectedItem === 'cashout' &&<Cashout/>}
+          {selectedItem === 'moneyinout' && <MoneyInout/>}
           {selectedItem === 'paypalTopup' &&<PaypalTopup/>}
           {selectedItem === 'billpayment' &&<BillPayment/>}
           

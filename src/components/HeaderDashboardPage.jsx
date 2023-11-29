@@ -1,7 +1,9 @@
 
 import loago1 from "../images/mbamlogo1.png";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {  faShoppingCart, faSignOut, faUser } from '@fortawesome/free-solid-svg-icons'
+import "../css/Mainpage.css"
+import navbell from "../images/navbell.png"
+import navbasket from "../images/navbasket.png"
+import navlogout from "../images/navlogout.png"
 
 const HeaderDashboardPage = () => {
   return (
@@ -20,13 +22,13 @@ const HeaderDashboardPage = () => {
           <div className="d-flex">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/register"><FontAwesomeIcon icon={faUser} /> Notification</a>
+                <a className="nav-link active" aria-current="page" href="/register"><img src={navbell} alt="" className="navicon" /> Notification</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/login"><FontAwesomeIcon icon={faShoppingCart} /> Shopping cart</a>
+                <a className="nav-link" href="/login"><img src={navbasket} alt="" className="navicon" /> Shopping cart</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/login"><FontAwesomeIcon icon={faSignOut} /> Logout</a>
+                <a className="nav-link" href="/login"><img src={navlogout} alt=""  className="navicon"/> Logout</a>
               </li>
             </ul>
           </div>

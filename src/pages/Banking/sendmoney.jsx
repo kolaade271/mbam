@@ -9,7 +9,7 @@ const Sendmoney = () => {
       <div className="row">
         <div className="col-md-12">
           <div className="card sendhead">
-            <div className="sendtitle">
+            <div className="sendtitle titlepadding">
               Send Money
             </div>
           </div>

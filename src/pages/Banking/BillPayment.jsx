@@ -44,7 +44,7 @@ const BillPayment = () => {
                             </div>
                             )}
 
-                            <div className="sendtitle">
+                            <div className="sendtitle titlepadding">
                                 Bill Payment
                             </div>
                         </div>

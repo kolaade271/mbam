@@ -12,7 +12,7 @@ const Mypurchase = () => {
                     <div className="card sendhead">
                         <div className="sendtitle">
                             <div className="row">
-                                <div className="col-md-3">My Purchase</div>
+                                <div className="col-md-3"><p>My Purchase</p></div>
                                 <div className="col-md-7"><div className="mb-3">
                                                     <input type="text"  className="form-control" id="" placeholder="" />
                                                 </div></div>

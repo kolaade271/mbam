@@ -13,6 +13,23 @@
     }
 }
 
+.tabicon{
+    height: 22px;
+}
+.navicon{
+    height: 22px;
+}
+
+.bankinexicon{
+    height: 22px;
+    font-size: 15px;
+}
+.bankinexbox{
+    padding-top: 10px;
+    height: 22px;
+    font-size: 15px;
+}
+
 .dasbbox {
     margin: 10px;
     border-radius: 20px;
@@ -48,20 +65,17 @@ th {
     text-align: center;
     text-shadow: 0px 0px 4px rgba(54, 71, 79, 0.25);
 
-    /* H4 Medium */
-    font-family: Poppins;
-    font-size: 18px;
-    font-style: normal;
+    font-size: 16px;
     font-weight: 600;
     line-height: 140%;
-    /* 39.2px */
-    margin-top: -5px;
-    margin-bottom: 10px;
-    padding: 10px;
+    padding: 5px;
 }
 
 .dashboximg {
     padding: 40px;
+    height: 125px;
+    width: 125px;
+    
 
 }
 
@@ -102,7 +116,7 @@ th {
 .list-li {
     color: var(--light-black, #393939);
     margin-left: 25px;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
@@ -115,8 +129,6 @@ th {
 }
 
 .mainc {
-    padding: 28px 42px 27px 30px;
-
     background: #F6F6F6;
     color: var(--bold-black-color, #262626);
     font-size: 23px;
@@ -197,14 +209,13 @@ table tr .tr {
 }
 
 .sendhead {
-    padding: 20px 21px 20px 30px;
+    padding: 10px 10px 10px 20px;
 }
 
 .sendtitle {
-    font-size: 19px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 600;
-    line-height: 140%;
 }
 
 .sendsubtitle {
@@ -281,6 +292,33 @@ table tr .tr {
     margin: 30px 10px 10px 10px;
 }
 
+.leftnav {
+    max-width: 350px;
+    margin-top: 15px;
+  }
+  
+/* Default width for larger screens */
+.maindash {
+    width: 72%;
+  }
+  
+  /* Media query for medium-sized screens */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .maindash {
+      /* Adjust the width as needed for medium-sized screens */
+    }
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 767px) {
+    .maindash {
+      width: 100%; /* Set the width to 100% on smaller screens */
+    }
+  }
+  
+  
+  
+  
 .bilsds {
     border-radius: 10px;
     border: 1px solid rgba(57, 57, 57, 0.20);
@@ -311,6 +349,9 @@ table tr .tr {
     height: 62px;
     flex-shrink: 0;
     margin-bottom: 30px;
+}
+.icons{
+    width: 22px;
 }
 
 .rowdbil {
@@ -351,6 +392,7 @@ table tr .tr {
 
 .hdtitle {
     margin: 10px;
+    font-size: 18px;
 }
 
 .pot {
@@ -457,6 +499,7 @@ table tr .tr {
     min-width: 180px;
     outline-color: #FFF;
     border-color: #FFF;
+    cursor: pointer;
 
 }
 
@@ -667,7 +710,7 @@ table tr .tr {
 
 .cartimg {
     margin-top: 30px;
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
     padding-bottom: 10px;
 }
@@ -689,7 +732,18 @@ table tr .tr {
 .carttitle {
     margin-top: 20px;
     color: #262626;
-    font-size: 30px;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    /* 56px */
+}
+
+
+.cartamttext {
+    margin-top: 20px;
+    color: #262626;
+    font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: 140%;
@@ -745,4 +799,11 @@ line-height: 140%;
 }
 .df{
     background: white;
+}
+.titlepadding{
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+.cartbody{
+    font-size: 15px;
 }

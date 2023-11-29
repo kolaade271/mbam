@@ -31,24 +31,24 @@ const MainMarket = () => {
 
   return (
     <div className="main">
-      <div className="row">
-        <div className="col-md-4">
-          <MarketLeftComponent />
-        </div>
-        <div className="col-md-8">
-        {selectedItem === 'maindata' &&<Mysale/>}
-         {selectedItem === 'mysale' &&<Mysale/>}
-         {selectedItem === 'mypurchase' &&<Mypurchase/>}
-         {selectedItem === 'myproduct' &&<Myproduct/>}
-         {selectedItem === 'categories' &&<Categories/>}
-          {selectedItem === 'marketplace' && <Shop/>}
-          {selectedItem === 'settings' && <Settings/>}
-          {selectedItem === 'delieverymethod' && <Delieverymethod/>}
-          {selectedItem === 'messages' && <Messages/>}
-
-        </div>
+    <div className="row">
+      <div className="col-md-4 leftnav">
+        <MarketLeftComponent />
+      </div>
+      <div className="col-12 col-md-8 maindash">
+        {selectedItem === 'maindata' && <Shop/>}
+        {selectedItem === 'mysale' && <Mysale/>}
+        {selectedItem === 'mypurchase' && <Mypurchase/>}
+        {selectedItem === 'myproduct' && <Myproduct/>}
+        {selectedItem === 'categories' && <Categories/>}
+        {selectedItem === 'marketplace' && <Shop/>}
+        {selectedItem === 'settings' && <Settings/>}
+        {selectedItem === 'delieverymethod' && <Delieverymethod/>}
+        {selectedItem === 'messages' && <Messages/>}
       </div>
     </div>
+  </div>
+  
   );
 };
 

@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import "../css/LandingPage.css";
 import HeaderDashboardPage from '../components/HeaderDashboardPage';
-import { Editor } from 'react-draft-wysiwyg';
-import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import bag3 from "../images/bag3.png"
 
 import "../css/Mainpage.css";
@@ -85,8 +83,8 @@ const Cart = () => {
                             </div>
                             <div className="col-md-7">
                                 <div className='carttitle'>Gucci bag</div>
-                                <div className='carttitle'>$400</div>
-                                <div className="cartsub">
+                                <div className='carttitle cartamttext'>$400</div>
+                                <div className="cartsub cartbody">
                                     Lorem ipsum dolor sit amet consectetur adipiscing elit suscipit dui ridiculus integer, potenti tempus vivamus quis eros id sem nam conubia.
                                 </div>
                                 <br />
@@ -120,8 +118,8 @@ const Cart = () => {
                             </div>
                             <div className="col-md-7">
                                 <div className='carttitle'>Gucci bag</div>
-                                <div className='carttitle'>$400</div>
-                                <div className="cartsub">
+                                <div className='carttitle cartamttext'>$400</div>
+                                <div className="cartsub cartbody">
                                     Lorem ipsum dolor sit amet consectetur adipiscing elit suscipit dui ridiculus integer, potenti tempus vivamus quis eros id sem nam conubia.
                                 </div>
                                 <br />
