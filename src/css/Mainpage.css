@@ -1,5 +1,6 @@
 .main {
     margin-top: 20px;
+    padding-bottom: 50px;
 }
 
 @media (max-width: 768px) {
@@ -692,6 +693,7 @@ table tr .tr {
 
 .mainnew {
     margin: 20px;
+   
 }
 
 .editor {
