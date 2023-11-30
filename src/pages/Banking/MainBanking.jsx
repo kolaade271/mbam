@@ -10,12 +10,12 @@ import Cashout from './Cashout';
 import PaymentAuth from './Payment';
 import BillPayment from './BillPayment';
 import MoneyInout from './Moneyinout';
-const MainBanking = () => {
+const MainBanking = (tabpage) => {
   const location = useLocation();
   const [selectedItem, setSelectedItem] = useState(null);
 
   useEffect(() => {
-    let page = "maindata"; 
+    let page = "maindata";
     setSelectedItem(page);
     if (location.state && location.state.page) {
       page = location.state.page;
@@ -23,7 +23,7 @@ const MainBanking = () => {
     }
     setSelectedItem(page);
    
-    console.log(selectedItem);
+    console.log(page);
   }, [location.state]);
   
 
@@ -34,7 +34,7 @@ const MainBanking = () => {
           <BankingLeftComponent /> 
         </div>
         <div className="col-md-8 maindash">
-        {selectedItem === 'maindata' && <BankingIndex/>}
+        {selectedItem === 'maindata' && <BankingIndex /> }
           {selectedItem === 'sendmoney' &&<Sendmoney/>}
           {selectedItem === 'paymentAuth' &&<PaymentAuth/>}
           {selectedItem === 'cashout' &&<Cashout/>}

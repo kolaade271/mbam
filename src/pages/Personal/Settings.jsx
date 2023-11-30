@@ -10,7 +10,7 @@ const Settings = () => {
             <div className="row">
                 <div className="col-md-12">
                     <div className="card sendhead">
-                        <div className="sendtitle">
+                        <div className="sendtitle titlepadding">
                             <div className="">Settings</div>
                         </div>
                     </div>

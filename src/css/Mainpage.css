@@ -809,3 +809,71 @@ line-height: 140%;
 .cartbody{
     font-size: 15px;
 }
+.reviewimg{
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    border-color: #EAA813;
+}
+
+.review {
+    display: flex;
+    align-items: center; 
+}
+
+.reviewimg {
+  
+    max-width: 50px; 
+    margin-right: 10px; 
+}
+.reviewicon{
+    max-width: 12px;
+}
+.textsmall{
+    font-size: 15px;
+}
+
+.sml {
+    padding-top: -10px;
+   font-size: 10px;
+}
+.smlnme {
+    padding-top: -10px;
+   font-size: 15px;
+}
+
+.smlmsg {
+    padding-top: -10px;
+   font-size: 13px;
+}
+.acti{
+    max-width: 25%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.messageicon{
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
+    border-color: #EAA813;
+
+    margin-right: 10px; 
+}
+.messages{
+    display: flex;
+    padding-bottom: 20px;
+}
+.btn-outline-secondary.chatbuttion{
+    border-radius: 0px 10px 10px 0px;
+background: var(--App-icon-colors, #EAA813);
+}
+.btn-outline-secondary.chatbuttion:active{
+    color: white;
+}
+
+.generalbutton{
+    border-radius: 0px 10px 10px 0px;
+background: var(--App-icon-colors, #EAA813);
+color: white;
+}

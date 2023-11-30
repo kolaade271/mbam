@@ -21,14 +21,14 @@ const BankingIndex = () => {
                                         Member Account - MBJMC 31653694
                                     </div>
                                 </div>
-                                <div className="col-md-6 ms-auto ">
+                                <div className="col-md-6"  >
                                     <div className="">
                                         <div className="row ">
-                                            <div className="col-md-6 bankinexbox">
+                                            <div className="col-md-6 bankinexbox" style={{ textAlign: 'right' }}>
                                                 <img src={filter} alt="" className='bankinexicon ' />
                                                 <span>Show filters</span>
                                             </div>
-                                            <div className="col-md-6  bankinexbox   ">
+                                            <div className="col-md-5  bankinexbox " style={{ textAlign: 'right' }}>
                                                 <img src={download} alt=""  className='bankinexicon ' />
                                                 <span>Download</span>
                                             </div>
@@ -90,7 +90,6 @@ const BankingIndex = () => {
                         </div>
                     </div>
                 </div>
-                <button className="btn btn-success adnewb manuals">Search Manually</button>
             </div>
         </div>
     );

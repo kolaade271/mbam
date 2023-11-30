@@ -26,7 +26,7 @@ const MarketLeftComponent = () => {
                     </div>
                 </div>
                 <div className="row dashleft">
-                    <div className="col-md-12 list-li" onClick={() => handleItemClick('shops', '3')}>
+                    <div className="col-md-12 list-li" onClick={() => handleItemClick('shop', '3')}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 37 37" fill="none">
                             <path d="M22.3543 32.375V24.125C22.3543 23.5727 21.9066 23.125 21.3543 23.125H15.646C15.0937 23.125 14.646 23.5727 14.646 24.125V32.375" stroke="#393939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M7.7085 16.958V28.3747C7.7085 30.2603 7.7085 31.2031 8.29428 31.7889C8.88007 32.3747 9.82288 32.3747 11.7085 32.3747H25.2918C27.1774 32.3747 28.1203 32.3747 28.706 31.7889C29.2918 31.2031 29.2918 30.2603 29.2918 28.3747V16.958" stroke="#393939" stroke-width="2" />

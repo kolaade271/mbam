@@ -24,13 +24,13 @@ const DashboardComponent = (tab) => {
     const handleTabClick = ( tab, page) => {
       navigate(`/dashboard`,{state: { page, tab }});
       
-    };
+    }; 
     return (
         <div className='main'>
         <div className="row">
 
             
-            <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center text-center"   onClick={() => handleTabClick("2","")}> 
+            <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center text-center"   onClick={() => handleTabClick("2","maindata")}> 
                 <div className="dasbbox">
                     <img src={bankibuilding} className='dashboximg'  alt='dash' />
                 </div>

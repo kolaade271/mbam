@@ -6,6 +6,8 @@ import bag3 from "../../images/newbag.png"
 import chaticon from "../../images/chaticon.png"
 import Tabs, { Tab } from 'react-best-tabs';
 import ReactStars from "react-rating-stars-component";
+import filter from "../../images/filter.png"
+import canada from "../../images/canada.png"
 const Shop = () => {
     const [getMain, SetMain] = useState(0);
 
@@ -18,7 +20,7 @@ const Shop = () => {
     const increaseQuantity = () => {
         setQuantity(quantity + 1);
     };
-    
+
 
     const decreaseQuantity = () => {
         if (quantity > 1) {
@@ -38,11 +40,14 @@ const Shop = () => {
             {getMain !== 1 && (<div className="row">
                 <div className="col-md-12">
                     <div className="card">
-                        <div className="card-header maine">
+                        <div className="card-header mainc">
                             <div className="hdtitle">
                                 <div className="row shophead">
                                     <div className="col-6">Shop</div>
-                                    <div className="col-6  filtershop" style={{ textAlign: 'right' }}>Show more</div>
+                                    <div className="col-6  filtershop" style={{ textAlign: 'right' }}>
+                                        <img src={filter} alt="" className='bankinexicon ' />
+                                        <span>Show More</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -91,7 +96,7 @@ const Shop = () => {
                                     </div>
                                     <div className="card-footer  marktfooter text-muted">
                                         <div className='dtext'>Gucci Bag</div>
-                                        <div className='rate'><ReactStars count={5}  size={15} color="#EAA813" /> </div>
+                                        <div className='rate'><ReactStars count={5} size={15} color="#EAA813" /> </div>
                                         <div className='row'>
                                             <div className="col-6 cardamt ">
                                                 N4,000.00
@@ -111,7 +116,7 @@ const Shop = () => {
                                     </div>
                                     <div className="card-footer  marktfooter text-muted">
                                         <div className='dtext'>Gucci Bag</div>
-                                        <div className='rate'><ReactStars count={5}  size={15} color="#EAA813" /> </div>
+                                        <div className='rate'><ReactStars count={5} size={15} color="#EAA813" /> </div>
                                         <div className='row'>
                                             <div className="col-6 cardamt ">
                                                 N4,000.00
@@ -131,7 +136,7 @@ const Shop = () => {
                                     </div>
                                     <div className="card-footer  marktfooter text-muted">
                                         <div className='dtext'>Gucci Bag</div>
-                                        <div className='rate'><ReactStars count={5}  size={15} color="#EAA813" /> </div>
+                                        <div className='rate'><ReactStars count={5} size={15} color="#EAA813" /> </div>
                                         <div className='row'>
                                             <div className="col-6 cardamt ">
                                                 N4,000.00
@@ -150,7 +155,7 @@ const Shop = () => {
                                     </div>
                                     <div className="card-footer  marktfooter text-muted">
                                         <div className='dtext'>Gucci Bag</div>
-                                        <div className='rate'><ReactStars count={5}  size={15} color="#EAA813" /> </div>
+                                        <div className='rate'><ReactStars count={5} size={15} color="#EAA813" /> </div>
                                         <div className='row'>
                                             <div className="col-6 cardamt ">
                                                 N4,000.00
@@ -169,7 +174,7 @@ const Shop = () => {
                                     </div>
                                     <div className="card-footer  marktfooter text-muted">
                                         <div className='dtext'>Gucci Bag</div>
-                                        <div className='rate'><ReactStars count={5}  size={15} color="#EAA813" /> </div>
+                                        <div className='rate'><ReactStars count={5} size={15} color="#EAA813" /> </div>
                                         <div className='row'>
                                             <div className="col-6 cardamt ">
                                                 N4,000.00
@@ -188,7 +193,7 @@ const Shop = () => {
                                     </div>
                                     <div className="card-footer  marktfooter text-muted">
                                         <div className='dtext'>Gucci Bag</div>
-                                        <div className='rate'><ReactStars count={5}  size={15} color="#EAA813" /> </div>
+                                        <div className='rate'><ReactStars count={5} size={15} color="#EAA813" /> </div>
                                         <div className='row'>
                                             <div className="col-6 cardamt ">
                                                 N4,000.00
@@ -207,7 +212,7 @@ const Shop = () => {
                                     </div>
                                     <div className="card-footer  marktfooter text-muted">
                                         <div className='dtext'>Gucci Bag</div>
-                                        <div className='rate'><ReactStars count={5}  size={15} color="#EAA813" /> </div>
+                                        <div className='rate'><ReactStars count={5} size={15} color="#EAA813" /> </div>
                                         <div className='row'>
                                             <div className="col-6 cardamt ">
                                                 N4,000.00
@@ -226,7 +231,7 @@ const Shop = () => {
                                     </div>
                                     <div className="card-footer  marktfooter text-muted">
                                         <div className='dtext'>Gucci Bag</div>
-                                        <div className='rate'><ReactStars count={5}  size={15} color="#EAA813" /> </div>
+                                        <div className='rate'><ReactStars count={5} size={15} color="#EAA813" /> </div>
                                         <div className='row'>
                                             <div className="col-6 cardamt ">
                                                 N4,000.00
@@ -253,7 +258,7 @@ const Shop = () => {
                     <div className="card sendhead">
                         <div className="sendtitle ">
                             <div className="row">
-                                <div className="col-md-2"> <span className='smdl'  onClick={() => handleClick(0)}>Back</span><br />Shopping Cart</div>
+                                <div className="col-md-2"> <span className='smdl' onClick={() => handleClick(0)}>Back</span><br />Shopping Cart</div>
                             </div>
                         </div>
                     </div>
@@ -278,7 +283,7 @@ const Shop = () => {
                             <br />
                             <div className='carttitle'>Gucci bag</div>
                             <div className='carttitle cartamttext'>$400</div>
-                            <div><ReactStars count={5}  size={18} color="#EAA813" /></div>
+                            <div><ReactStars count={5} size={18} color="#EAA813" /></div>
                             <div className="cartbody">
                                 Lorem ipsum dolor sit amet consectetur adipiscing elit suscipit dui ridiculus integer, potenti tempus vivamus quis eros id sem nam conubia.
                             </div>
@@ -311,16 +316,55 @@ const Shop = () => {
                         <Tabs activeTab="1" className="mt-5" ulClassName="" activityClassName="bg-success" onClick={(event, tab) => console.log(event, tab)} >
                             <Tab title="DESCRIPTION" className="mr-3">
                                 <div>
-                                Lorem ipsum dolor sit amet consectetur, adipiscing elit arcu commodo fusce facilisi,
-                                 pretium bibendum vehicula eget. Duis tellus rutrum fusce sociis
-                                  augue ultricies pellentesque et condimentum blandit netus,
-                                 platea nascetur penatibus curae ad libero massa lobortis inceptos feugiat.
+                                    Lorem ipsum dolor sit amet consectetur, adipiscing elit arcu commodo fusce facilisi,
+                                    pretium bibendum vehicula eget. Duis tellus rutrum fusce sociis
+                                    augue ultricies pellentesque et condimentum blandit netus,
+                                    platea nascetur penatibus curae ad libero massa lobortis inceptos feugiat.
                                 </div>
                             </Tab>
 
-                            <Tab title="REVIEW (0)" className="mr-3">
+                            <Tab title="REVIEW (2)" className="mr-3">
                                 <div className="mt-3">
-                                    Tab 3 content
+                                    <div>
+                                        <div className="review">
+                                            <span>
+                                                <img src={bag} alt="" className='reviewimg' />
+                                            </span>
+                                            <div>
+                                                <b>Isreal Barton</b><br />
+                                                <span className='sml'>
+                                                    <img src={canada} alt=""  className='reviewicon'/> Canada
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                        <div className='rate'><ReactStars count={5} size={15} color="#EAA813" /> </div>
+                                        <p className='textsmall'>Lorem ipsum dolor sit amet consectetur, adipiscing elit arcu commodo 
+                                            fusce facilisi, pretium bibendum vehicula eget. Duis tellus rutrum fusce sociis 
+                                            augue ultricies pellentesque et condimentum blandit netus, platea
+                                             nascetur penatibus curae ad libero massa lobortis inceptos feugiat.</p>
+                                    </div>
+
+                                    <div>
+                                        <div className="review">
+                                            <span>
+                                                <img src={bag} alt="" className='reviewimg' />
+                                            </span>
+                                            <div>
+                                                <b>Isreal Judas</b><br />
+                                                <span className='sml'>
+                                                <img src={canada} alt=""  className='reviewicon'/> United State
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                        <div className='rate'><ReactStars value={3} count={5} size={15} activeColor="#EAA813" color="grey" /> </div>
+                                        <p className='textsmall'>Lorem ipsum dolor sit amet consectetur, adipiscing elit arcu commodo 
+                                            fusce facilisi, pretium bibendum vehicula eget. Duis tellus rutrum fusce sociis 
+                                            augue ultricies pellentesque et condimentum blandit netus, platea
+                                             nascetur penatibus curae ad libero massa lobortis inceptos feugiat.</p>
+                                    </div>
+
                                 </div>
                             </Tab>
                         </Tabs>

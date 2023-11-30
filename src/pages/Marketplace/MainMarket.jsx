@@ -8,9 +8,9 @@ import Myproduct from './Myproduct';
 import Mysale from './Mysale';
 import Categories from './Categories';
 import Mypurchase from './Mypurchase';
-import Settings from './Settings';
 import Delieverymethod from './Delieverymethod';
-import Messages from './messages';
+import Messages from '../Personal/messages';
+import Settings from '../Personal/Settings';
 
 const MainMarket = () => {
   const location = useLocation();
@@ -36,6 +36,7 @@ const MainMarket = () => {
         <MarketLeftComponent />
       </div>
       <div className="col-12 col-md-8 maindash">
+      {selectedItem === 'shop' && <Shop/>}
         {selectedItem === 'maindata' && <Shop/>}
         {selectedItem === 'mysale' && <Mysale/>}
         {selectedItem === 'mypurchase' && <Mypurchase/>}
