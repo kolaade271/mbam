@@ -100,7 +100,7 @@ const DashboardComponent = (tab) => {
 
 
 
-            <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center text-center "> 
+            <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center text-center " onClick={() => handleTabClick("5","reference")}> 
                 <div className="dasbbox">
                     <img src={img7} className='dashboximg' alt='dash' />
                 </div>
@@ -110,7 +110,7 @@ const DashboardComponent = (tab) => {
             </div>
 
 
-            <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center text-center "> 
+            <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center text-center " onClick={() => handleTabClick("5","feedback")}> 
                 <div className="dasbbox">
                     <img src={img8} className='dashboximg' alt='dash' />
                 </div>
@@ -150,7 +150,7 @@ const DashboardComponent = (tab) => {
             </div>
 
 
-            <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center text-center "> 
+            <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center text-center "  onClick={() => handleTabClick("5","messages")}> 
                 <div className="dasbbox">
                     <img src={img12} className='dashboximg' alt='dash' />
                 </div>
@@ -161,7 +161,7 @@ const DashboardComponent = (tab) => {
 
 
 
-            <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center text-center "> 
+            <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center text-center " onClick={() => handleTabClick("5","profile")}> 
                 <div className="dasbbox">
                     <img src={img13} className='dashboximg' alt='dash' />
                 </div>

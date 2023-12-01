@@ -5,6 +5,10 @@ import "../../css/Mainpage.css";
 import PersonalLeftComponent from '../../components/pages/PersonalLeftComponent';
 import Profile from './Profile';
 import Messages from './messages';
+import Reference from './Reference';
+import Settings from './Settings';
+import FeedBack from './Feedback';
+import Notification from './Notification';
 
 const MainPersonal = () => {
   const location = useLocation();
@@ -33,6 +37,10 @@ const MainPersonal = () => {
       {selectedItem === 'mainprofile' && <Profile/>}
       {selectedItem === 'profile' && <Profile/>}
       {selectedItem === 'messages' && <Messages/>}
+      {selectedItem === 'reference' && <Reference/>}
+      {selectedItem === 'setting' && <Settings/>}
+      {selectedItem === 'feedback' && <FeedBack/>}
+      {selectedItem === 'notification' && <Notification/>}
       </div>
     </div>
   </div>

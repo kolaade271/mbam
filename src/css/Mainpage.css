@@ -877,3 +877,25 @@ background: var(--App-icon-colors, #EAA813);
 background: var(--App-icon-colors, #EAA813);
 color: white;
 }
+
+.mtm{
+    max-width: 150px;
+}
+
+.linerate{
+    width: 10px;
+height: 10px;
+flex-shrink: 0;
+}
+
+.feedbacks{
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.feedbacks:nth-child(2n){
+    border-top: 2px solid rgba(57, 57, 57, 0.10);
+    border-bottom: 2px solid rgba(57, 57, 57, 0.10);
+    background: #F6F6F6;
+}
