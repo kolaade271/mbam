@@ -8,6 +8,7 @@ import MainBanking from './Banking/MainBanking';
 import MainMarket from './Marketplace/MainMarket';
 import "../css/Mainpage.css";
 import MainPersonal from './Personal/MainPersonal';
+import MainInfo from './Information/MainInfo';
 
 const DashboardPage = () => {
   const location = useLocation();
@@ -37,8 +38,9 @@ const DashboardPage = () => {
   const tabContent = {
     dashboard: <div><DashboardComponent data={stage} /></div>,
     banking: <div><MainBanking page="main"/></div>,
-    marketplace: <div><MainMarket page="market"/></div>,
+    marketplace: <div><MainMarket page=""/></div>,
     personal: <div><MainPersonal/></div>,
+    information: <div><MainInfo/></div>,
   };
 
   return (

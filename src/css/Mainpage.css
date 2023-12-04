@@ -303,12 +303,7 @@ table tr .tr {
     width: 72%;
   }
   
-  /* Media query for medium-sized screens */
-  @media (min-width: 768px) and (max-width: 991px) {
-    .maindash {
-      /* Adjust the width as needed for medium-sized screens */
-    }
-  }
+ 
   
   /* Media query for smaller screens */
   @media (max-width: 767px) {
@@ -409,7 +404,8 @@ table tr .tr {
 
 .biltrxsuccess {
     display: flex;
-    width: 396px;
+    width: 300px;
+    max-height: 300px;
     padding: 73px 61px 33px 61px;
     justify-content: center;
     align-items: center;
@@ -443,14 +439,14 @@ table tr .tr {
 
 
 .paydetails {
-    width: 396px;
+    width: 300px;
     border-radius: 10px;
     border: 1px solid rgba(54, 71, 79, 0.30);
     padding: 20px;
     font-size: 20px;
     font-weight: 500;
     line-height: 140%;
-    font-size: 18px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
     color: var(--bold-black-color, #262626);
@@ -556,8 +552,6 @@ table tr .tr {
     border-radius: 10px;
     background: var(--Button-color, #36474F);
 }
-
-.producticon {}
 
 
 
@@ -898,4 +892,38 @@ flex-shrink: 0;
     border-top: 2px solid rgba(57, 57, 57, 0.10);
     border-bottom: 2px solid rgba(57, 57, 57, 0.10);
     background: #F6F6F6;
+}
+
+.dtextx1{
+    color: var(--bold-black-color, #262626);
+    text-align: center;
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 22.4px */
+}
+
+.dtextx{
+    color: var(--bold-black-color, #262626);
+    text-align: center;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 22.4px */
+}
+
+.trxstate{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* .form-check-label::before {
+    background-color: darkorange;
+    padding-right: 10px;
+} */
+
+.radion{
+    height: 15px;
 }

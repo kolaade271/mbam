@@ -10,7 +10,7 @@ const SuccessComponent = () => {
             <div className="row">
                 <div className="col-md-12">
                     <div className="card sendhead">
-                        <div className="sendtitle">
+                        <div className="sendtitle trxstate">
                             Transaction Status
                         </div>
                     </div>
@@ -42,24 +42,24 @@ const SuccessComponent = () => {
 
                         <p style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', margin: "30px" }}> Payment details</p>
                         <div className="">
-    <div className="paydetails mx-auto">
-      <div className="row">
-        <div className="col-6">Amount</div>
-        <div className="col-6 green2" style={{ textAlign: 'right' }}>100.00 FCFA</div>
-      </div>
-      <div className="row">
-        <div className="col-6">Date</div>
-        <div className="col-6 green2 " style={{ textAlign: 'right' }}>20-06-2021 16:59</div>
-      </div>
-      <div className="row">
-        <div className="col-6">Payment type</div>
-        <div className="col-6 green2 " style={{ textAlign: 'right' }}>Member Payment</div>
-      </div>
-   
-   
-    </div>
-    
-  </div>
+                            <div className="paydetails mx-auto">
+                                <div className="row">
+                                    <div className="col-6">Amount</div>
+                                    <div className="col-6 green2" style={{ textAlign: 'right', }}>100.00 FCFA</div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-4">Date</div>
+                                    <div className="col-8 green2 " style={{ textAlign: 'right' }}>20-06-2021 16:59</div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-6">Payment type</div>
+                                    <div className="col-6 green2 " style={{ textAlign: 'right' }}>Member Payment</div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
 
 
 

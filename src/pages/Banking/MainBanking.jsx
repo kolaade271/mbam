@@ -10,6 +10,7 @@ import Cashout from './Cashout';
 import PaymentAuth from './Payment';
 import BillPayment from './BillPayment';
 import MoneyInout from './Moneyinout';
+import Users from './Users';
 const MainBanking = (tabpage) => {
   const location = useLocation();
   const [selectedItem, setSelectedItem] = useState(null);
@@ -41,6 +42,7 @@ const MainBanking = (tabpage) => {
           {selectedItem === 'moneyinout' && <MoneyInout/>}
           {selectedItem === 'paypalTopup' &&<PaypalTopup/>}
           {selectedItem === 'billpayment' &&<BillPayment/>}
+          {selectedItem === 'users' &&<Users/>}
           
         </div>
       </div>

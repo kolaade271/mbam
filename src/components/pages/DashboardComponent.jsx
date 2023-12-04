@@ -89,7 +89,7 @@ const DashboardComponent = (tab) => {
             </div>
 
 
-            <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center text-center "> 
+            <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center text-center " onClick={() => handleTabClick("2","users")}> 
                 <div className="dasbbox">
                     <img src={img6} className='dashboximg' alt='dash' />
                 </div>
