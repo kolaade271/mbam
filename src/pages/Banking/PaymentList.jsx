@@ -5,6 +5,7 @@ import SuccessComponent from '../../components/pages/SuccessComponent';
 import users from "../../images/users.png"
 import qr from "../../images/qr.png"
 import qrcode from "../../images/qrcode.png"
+import PinComponent from '../../components/pages/Pincomponent';
 
 
 const PaymentList = () => {
@@ -30,8 +31,15 @@ const PaymentList = () => {
     };
 
     const handlePayClick = (paydata) => {
-        setPay("completed")
-        setStage(paydata);
+        if(paydata == 99){
+            setPay("pin")
+            setStage(paydata);
+        }
+        else{
+            setPay("completed")
+            setStage(paydata);
+        }
+    
     };
 
 
@@ -159,23 +167,37 @@ const PaymentList = () => {
                                     {stage === "Scan QR / Barcode" && (
                                         <div className="electricpay">
                                             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                            <div className="biltrxsuccess2 text-center">
+                                                <div className="biltrxsuccess2 text-center">
                                                     <p className="sml2">
-                                                    Align QR code with the frame to scan
+                                                        Align QR code with the frame to scan
                                                     </p>
                                                     <div>
-                                                        <img src={qrcode} alt=""  className='qrcode'/>
+                                                        <img src={qrcode} alt="" className='qrcode' />
                                                     </div>
-
-                                                   
                                                 </div>
+                                            </div>
+
+                                            <br />
+                                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                                <div className="biltrxsuccess2 text-center">
+                                                    <div className="qramt">
+                                                        <p className='sml'>Or enter your code below</p>
+                                                        <input type="number" className="form-control" id="exampleFormControlInput1" placeholder="" />
+                                                    </div>
                                                 </div>
+                                            </div>
 
 
 
-                                            <button className="btn rgbutton" onClick={() => handlePayClick(99)}>
-                                                Pay
+                                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                                <br/>
+                                            <button  className="btn rgbutton qrbtn" onClick={() => handlePayClick(99)}>
+                                                Approved
                                             </button>
+                                            </div>
+
+
+                                            
                                         </div>
                                     )}
 
@@ -212,6 +234,7 @@ const PaymentList = () => {
             </div>
             )}
             {payState === "completed" && <SuccessComponent />}
+            {payState === "pin" && <PinComponent />}
         </>
     );
 };

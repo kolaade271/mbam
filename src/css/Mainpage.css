@@ -1008,3 +1008,7 @@ flex-shrink: 0;
 .qrcodde{
     width: 10px;
 }
+
+.qramt{
+    padding: 10px;
+}
