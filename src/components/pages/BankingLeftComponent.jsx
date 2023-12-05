@@ -20,7 +20,7 @@ const BankingLeftComponent = () => {
 
     return (
         <div className=''>
-            <div className="card leftcard">
+            <div className="card ">
                 <div className="card-header header-card">
                     <div className="carddashboximg">
                         <img src={banking} className='card-circle' alt='dash' />

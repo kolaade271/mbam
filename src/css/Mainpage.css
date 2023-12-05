@@ -88,9 +88,11 @@ th {
 
 .leftcard {
     min-height: 500px;
-    border-radius: 10px;
+    border-radius: 5px;
     background: #FFF;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 5px 0px rgba(194, 193, 193, 0.25);
+    border-color: '1px solid rgba(194, 193, 193, 0.25)'
+
 }
 
 .card-circle {
@@ -112,6 +114,9 @@ th {
     text-align: center;
     margin: 20px;
 
+}
+.card{
+    border: #000;
 }
 
 .list-li {
@@ -327,6 +332,17 @@ table tr .tr {
     margin-bottom: 30px;
 }
 
+.bilsds2 {
+    border-radius: 10px;
+    border: 1px solid rgba(57, 57, 57, 0.20);
+    background: #F6F6F6;
+    box-shadow: 0px 0px 3px 0px rgba(57, 57, 57, 0.25);
+    min-width: 250px;
+    max-width: 300px;
+    flex-shrink: 0;
+    margin-bottom: 30px;
+}
+
 .form-label2 {
     color: var(--light-black, #393939);
 
@@ -372,6 +388,16 @@ table tr .tr {
 
 }
 
+.bfd2 {
+    background-color: var(--App-icon-colors, #36474F);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .centered {
     margin: 3px;
     justify-content: center;
@@ -409,6 +435,19 @@ table tr .tr {
     padding: 73px 61px 33px 61px;
     justify-content: center;
     align-items: center;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 1px 4px 20px 0px rgba(39, 59, 74, 0.15);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.biltrxsuccess2 {
+    width: 250px;
+    max-height: 250px;
+    padding-bottom: 20px;
+    
     border-radius: 20px;
     background: #FFF;
     box-shadow: 1px 4px 20px 0px rgba(39, 59, 74, 0.15);
@@ -828,8 +867,18 @@ line-height: 140%;
 }
 
 .sml {
+
     padding-top: -10px;
    font-size: 10px;
+}
+
+.sml2 {
+    margin-top: 10px;
+line-height: 12px;
+   font-size: 12px;
+}
+.grey{
+    color: grey;
 }
 .smlnme {
     padding-top: -10px;
@@ -951,3 +1000,11 @@ flex-shrink: 0;
 
 
  
+.pml{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.qrcodde{
+    width: 10px;
+}
