@@ -902,6 +902,19 @@ font-style: normal;
 font-weight: 600;
 line-height: 140%; /* 22.4px */
 }
+.ctm{
+    background-color: rgb(2, 94, 131);
+    color: white;
+}
+
+.ctm2{
+    background-color: white;
+    color: black;
+}
+
+.card-text{
+    font-size: 15px;
+}
 
 .dtextx{
     color: var(--bold-black-color, #262626);
@@ -927,3 +940,14 @@ line-height: 140%; /* 22.4px */
 .radion{
     height: 15px;
 }
+
+.carol{
+    width: 350px;
+height: 211px;
+flex-shrink: 0;
+}
+
+
+
+
+ 

@@ -2,7 +2,18 @@ import React from 'react';
 import "../../css/LandingPage.css";
 import "../../css/Mainpage.css";
 import radion from "../../images/radio.png"
+import SlideCardRow from './SlideCardRow';
+
 const Remaark = () => {
+    const data = [
+        { title: 'Card x', description: 'Description for Card 1', image: 'image1.jpg' },
+        { title: 'Card 2', description: 'Description for Card 2', image: 'image2.jpg' },
+        { title: 'Card 1', description: 'Description for Card 1', image: 'image1.jpg' },
+    { title: 'Card 2', description: 'Description for Card 2', image: 'image2.jpg' },
+    { title: 'Card 3', description: 'Description for Card 3', image: 'image3.jpg' },
+  
+        // Add more data as needed
+      ];
 
     return (
         <div className="main">
@@ -31,7 +42,7 @@ const Remaark = () => {
 
                         <div className="row ppay">
                          
-
+                        <SlideCardRow data={data} />
 
                         </div>
 
