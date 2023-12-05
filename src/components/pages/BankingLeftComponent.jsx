@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import img1 from "../../images/1.png";
 import arrowright from "../../images/arrowright.png"
 import arrowleft from "../../images/arrowleft.png"
 import arrowup from "../../images/arrowup.png"
