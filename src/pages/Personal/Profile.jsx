@@ -1,9 +1,21 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import "../../css/LandingPage.css";
 import "../../css/Mainpage.css";
 import samplet from "../../images/samplet.png"
+import { LoadDataStorage } from '../../auth/connect';
+import useReusableDataFetcher from '../../auth/refetch';
+
+
 
 const Profile = () => {
+    const [profile,setProfile]= useState(false);
+
+    
+    useEffect(() => {
+        const profile = LoadDataStorage("profile");
+        setProfile(JSON.parse(profile));
+     
+      }, []); 
 
     return (
         <div className="main">
@@ -24,7 +36,7 @@ const Profile = () => {
                                 </div>
                                 <div className="col-md-6 col-sm-12">
                                     <div className="mb-3">
-                                        <input type="text" value={"KOLA  PELUMI"} className="form-control" id="" placeholder="john Doe" readOnly={true} />
+                                        <input type="text" value={profile?.firstName+' '+profile?.lastName} className="form-control" id="" placeholder="john Doe" readOnly={true} />
                                     </div>
                                 </div>
                             </div>
@@ -36,7 +48,7 @@ const Profile = () => {
                                 </div>
                                 <div className="col-md-6 col-sm-12">
                                     <div className="mb-3">
-                                        <input type="text" value={"KOLA  PELUMI"} className="form-control" id="" placeholder="john Doe" readOnly={true} />
+                                        <input type="text" value={profile?.userName} className="form-control" id="" placeholder="john Doe" readOnly={true} />
                                     </div>
                                 </div>
                             </div>
@@ -49,7 +61,7 @@ const Profile = () => {
                                 </div>
                                 <div className="col-md-6 col-sm-12">
                                     <div className="mb-3">
-                                        <input type="text" value={"kola@helloword.com"} className="form-control" id="" placeholder="john Doe" readOnly={true} />
+                                        <input type="text" value={profile?.email} className="form-control" id="" placeholder="john Doe" readOnly={true} />
                                     </div>
                                 </div>
                             </div>
@@ -61,7 +73,7 @@ const Profile = () => {
                                 </div>
                                 <div className="col-md-6 col-sm-12">
                                     <div className="mb-3">
-                                        <input type="text" value={"23412733744774"} className="form-control" id="" placeholder="john Doe" readOnly={true} />
+                                        <input type="text" value={profile?.phoneNumber} className="form-control" id="" placeholder="john Doe" readOnly={true} />
                                     </div>
                                 </div>
                             </div>
@@ -71,7 +83,7 @@ const Profile = () => {
                             <br/>
                             <div className="row">
                                 <div className="col-md-3 acti"><b>Activation date</b></div>
-                                <div className="col">2023-12-10</div>
+                                <div className="col">{profile?.storeActivate??"Not set"}</div>
                             </div>
                             <div className="row">
                                 <div className="col-md-3 acti"><b>References</b></div>

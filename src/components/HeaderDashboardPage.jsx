@@ -1,11 +1,17 @@
 
 import loago1 from "../images/mbamlogo1.png";
-import "../css/Mainpage.css"
-import navbell from "../images/navbell.png"
-import navbasket from "../images/navbasket.png"
-import navlogout from "../images/navlogout.png"
+import "../css/Mainpage.css";
+import navbell from "../images/navbell.png";
+import navbasket from "../images/navbasket.png";
+import navlogout from "../images/navlogout.png";
+import { SaveDataStorage } from "../auth/connect";
 
 const HeaderDashboardPage = () => {
+  const handleLogout = () => {
+    sessionStorage.clear();
+    window.location.href = "/login";
+  };
+
   return (
     <nav className="navbar navbar-expand-lg ">
       <div className="container-fluid custom-container ">
@@ -27,8 +33,8 @@ const HeaderDashboardPage = () => {
               <li className="nav-item">
                 <a className="nav-link" href="/login"><img src={navbasket} alt="" className="navicon" /> Shopping cart</a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/login"><img src={navlogout} alt=""  className="navicon"/> Logout</a>
+              <li className="nav-item"  onClick={handleLogout}>
+                <a className="nav-link" href=""><img src={navlogout} alt=""  className="navicon"/> Logout</a>
               </li>
             </ul>
           </div>

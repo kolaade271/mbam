@@ -291,3 +291,8 @@ background: #F6F6F6  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/
   margin-top: 20px;
   width: 30%;
 }
+
+.error-message{
+  color: red;
+  font-size: 12px;
+}

@@ -1,9 +1,18 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import "../../css/LandingPage.css";
 import "../../css/Mainpage.css";
 import samplet from "../../images/samplet.png"
+import { LoadDataStorage } from '../../auth/connect';
 
 const Settings = () => {
+    const [profile,setProfile]= useState(false);
+    useEffect(() => {
+        const profile = LoadDataStorage("profile");
+        setProfile(JSON.parse(profile));
+       
+        
+      }, []); 
+   
 
     return (
         <div className="main">
@@ -40,14 +49,14 @@ const Settings = () => {
                                 </div>
                             </div>
                             <br />
-                            <p className='profilename'> Israel Barton</p>
+                            <p className='profilename'> {profile?.firstName} {profile?.lastName}</p>
                             <div className="row">
                                 <div className="col-md-3 d-none d-sm-block ttex">
                                     Username
                                 </div>
                                 <div className="col-md-6 col-sm-12">
                                     <div className="mb-3">
-                                        <input type="email" className="form-control" placeholder="@lsrealbarton1234" readOnly />
+                                        <input type="email" className="form-control" placeholder={profile?.userName} readOnly />
                                     </div>
                                 </div>
                             </div>
@@ -58,7 +67,7 @@ const Settings = () => {
                                 </div>
                                 <div className="col-md-6 col-sm-12">
                                     <div className="mb-3">
-                                        +23481234573
+                                        {profile?.phoneNumber}
                                     </div>
                                 </div>
                             </div>
@@ -69,7 +78,7 @@ const Settings = () => {
                                 </div>
                                 <div className="col-md-6 col-sm-12">
                                     <div className="mb-3">
-                                        Male
+                                    {profile?.gender??"Not set"}
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +89,7 @@ const Settings = () => {
                                 </div>
                                 <div className="col-md-6 col-sm-12">
                                     <div className="mb-3">
-                                        14-10-1990
+                                    {profile?.dob??"Not set"}
                                     </div>
                                 </div>
                             </div>
@@ -91,7 +100,7 @@ const Settings = () => {
                                 </div>
                                 <div className="col-md-6 col-sm-12">
                                     <div className="mb-3">
-                                        akin***jk@gmail.com <span className='bagedverified'>Verified</span>
+                                    {profile?.email} <span className='bagedverified'>Verified</span>
                                     </div>
                                 </div>
                             </div>

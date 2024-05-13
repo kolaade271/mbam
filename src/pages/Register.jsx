@@ -4,39 +4,26 @@ import HeaderLoginPage from "../components/HeaderLandingPage";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRotateBackward } from '@fortawesome/free-solid-svg-icons'
 import OtpInput from 'react18-input-otp';
-
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { ApiFetcher, SaveDataStorage } from '../auth/connect';
+import { AlertMe } from '../components/alert';
 const RegisterPage = () => {
     const [otp, setOtp] = useState('');
+    const [token, setToken] = useState(false);
+    const [loading, setLoading] = useState(false);
     const handleChange = (enteredOtp) => {
         setOtp(enteredOtp);
     };
     const [step, setStep] = useState(1);
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        password: ''
-    });
-
-    // const handleInputChange = (e) => {
-    //     const { name, value } = e.target;
-    //     setFormData({ ...formData, [name]: value });
-    // };
-
-    const handleContinueClick = () => {
-        if (step < 4) {
-            setStep(step + 1);
-        } else {
-            // Handle form submission here
-            console.log('Form submitted:', formData);
-            // Add your API call or form submission logic here
-        }
-    };
-
 
     return (
         <div className="">
             <HeaderLoginPage />
             <div className="wid">
+                <ToastContainer />
                 <div className="pdm">
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <div className="card ccard" style={{ width: '40rem' }}>
@@ -50,173 +37,182 @@ const RegisterPage = () => {
                                     <> User Verification</>
                                 )}
 
-                                {step === 3 && (
-                                    <> Provide your Information</>
-                                )}
-
-                                {step === 4 && (
-                                    <> Tell us a bit about your store</>
-                                )}
-
                             </div>
                             <div className="card-body">
-                                {/* Step 1 */}
-                                {step === 1 && (
-                                    <div className="card-body">
-                                        <div className="row">
-                                            <div className="col-4 d-none d-sm-block ttex">
-                                                Name
-                                            </div>
-                                            <div className="col-md-8 col-sm-12">
-                                                <div className="mb-3">
-                                                    <input type="text" className="form-control" id="" placeholder="john Doe" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="row">
-                                            <div className="col-4 d-none d-sm-block ttex">
-                                                Email
-                                            </div>
-                                            <div className="col-md-8 col-sm-12">
-                                                <div className="mb-3">
-                                                    <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="row">
-                                            <div className="col-4 d-none d-sm-block ttex">
-                                                Login password
-                                            </div>
-                                            <div className="col-md-8 col-sm-12">
-                                                <div className="mb-3">
-                                                    <input type="password" className="form-control" id="" placeholder="**********" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                )}
-                                {/* Step 2 */}
-                                {step === 2 && (
-                                    <div className="">
-                                        <div className="ttm">Enter Code</div>
-                                        <div className="ttm2">We’ve sent you the verification code to your mobile number</div>
-                                        <div align="center">
-                                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }}>
-                                                {/* Other content */}
-                                                <OtpInput value={otp} onChange={handleChange} numInputs={4} inputStyle={{ height: "60px", width: "60px" }} separator={<span>-</span>} />
-                                                {/* Other content */}
-                                            </div>
-                                            <button className="btn rg" onClick={handleContinueClick}>
-                                                Verify
-                                            </button>
-                                        </div>
+                                <Formik
+                                    initialValues={{
+                                        firstName: '',
+                                        lastName: '',
+                                        userName: '',
+                                        email: '',
+                                        password: '',
+                                        phoneNumber: ''
+                                    }}
+                                    validationSchema={Yup.object({
+                                        firstName: Yup.string().required('First name is required'),
+                                        lastName: Yup.string().required('Last name is required'),
+                                        userName: Yup.string().required('Username is required'),
+                                        email: Yup.string().email('Invalid email address').required('Email is required'),
+                                        password: Yup.string()
+                                            .required('Password is required')
+                                            .matches(
+                                                /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{6,}$/,
+                                                'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character'
+                                            ),
 
+                                        phoneNumber: Yup.string().required('Phone number is required'),
 
+                                    })}
+                                    onSubmit={async (values, { setSubmitting, setFieldError }) => {
+                                        setLoading(true)
+                                        try {
+                                            if (step === 1) {
 
-                                    </div>
-                                )}
-                                {/* Step 3 */}
-                                {step === 3 && (
-                                    <div className="card-body">
-                                        <div className="row">
-                                            <div className="col-4 d-none d-sm-block ttex">
-                                                Name
-                                            </div>
-                                            <div className="col-md-8 col-sm-12">
-                                                <div className="mb-3">
-                                                    <input type="text" value={"KOLA  PELUMI"} className="form-control" id="" placeholder="john Doe" readOnly={true} />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="row">
-                                            <div className="col-4 d-none d-sm-block ttex">
-                                                Email
-                                            </div>
-                                            <div className="col-md-8 col-sm-12">
-                                                <div className="mb-3">
-                                                    <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="row">
-                                            <div className="col-4 d-none d-sm-block ttex">
-                                                Mobile Phone
-                                            </div>
-                                            <div className="col-md-8 col-sm-12">
-                                                <div className="mb-3">
-                                                    <input type="phone" className="form-control" placeholder="+2348099838822" />
-                                                </div>
-                                            </div>
-                                        </div>
+                                                const result = await ApiFetcher(`user/registration`, "post", values, null, { deviceType: "web" }, null, null);
+                                                console.log(result);
+                                                if (result?.status === 200) {
+                                                    setToken(result);
+                                                    setStep(step + 1);
+                                                }
+                                                else {
+                                                    AlertMe(false, result);
+                                                }
+                                            }
+                                            else {
+                                                const result = await ApiFetcher(`user/verify/${token?.data?.id}/${otp}`, "get", null, null, { deviceType: "web" }, null, null);
+                                                console.log(result);
+                                                if (result?.status === 200) {
+                                                    const loadprofile = await ApiFetcher(`user/info`, "get", null, null,null, null, result?.data?.token);
+                                                    if(loadprofile.status === 200){
+                                                        SaveDataStorage("token", result?.data?.token);
+                                                        setToken(result);
+                                                        AlertMe(true, 'success');
+                                                        SaveDataStorage("profile",JSON.stringify(loadprofile?.data));
+                                                        window.location.href = "/dashboard";
+                                                    }
+                                                    else{
+                                                        AlertMe(false, "Unable to load profile please try again");
+                                                    }
+                                                    console.log(result);
+                                                }
+                                                else {
+                                                    AlertMe(false, result);
+                                                }
 
-                                        <div className="row">
-                                            <div className="col-4 d-none d-sm-block ttex">
-                                                Address
-                                            </div>
-                                            <div className="col-md-8 col-sm-12">
-                                                <div className="mb-3">
-                                                    <input type="text" className="form-control" placeholder="eg Texas" />
-                                                </div>
-                                            </div>
-                                        </div>
+                                            }
 
-
-                                        <div className="row">
-                                            <div className="col-4 d-none d-sm-block ttex">
-                                                City
-                                            </div>
-                                            <div className="col-md-8 col-sm-12">
-                                                <div className="mb-3">
-                                                    <input type="text" className="form-control" placeholder="Houston" />
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div className="row">
-                                            <div className="col-4 d-none d-sm-block ttex">
-                                                City
-                                            </div>
-                                            <div className="col-md-8 col-sm-12">
-                                                <div className="mb-3">
-                                                    <select className=" form-control form-select" aria-label="Default select example">
-                                                        <option selected>Select Country</option>
-                                                        <option value="1">United States</option>
-                                                        <option value="2">Canada</option>
-                                                        <option value="3">Nigeria</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div className="row">
-                                            <div className="col-4 d-none d-sm-block ttex">
-                                                Zip Code
-                                            </div>
-                                            <div className="col-md-8 col-sm-12">
-                                                <div className="mb-3">
-                                                    <input type="text" className="form-control" id="" placeholder="eg 20003848" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                )}
-
-                                <div className="row">
-                                    <div className="col-md-5"></div>
-                                    <div className="col-md-7 d-flex justify-content-between align-items-center">
-
-                                        {step === 2 ? "" :
-                                            <>
-                                                <span>Step {step} of 4</span>
-                                                <button className="btn rg" onClick={handleContinueClick}>
-                                                    {step < 4 ? 'Continue' : 'Submit'}
-                                                </button>
-                                            </>
+                                        } catch (error) {
+                                            console.error(error);
+                                            AlertMe(false, "Please Try Again");
+                                            setSubmitting(false);
                                         }
-                                    </div>
-                                </div>
+                                        setLoading(false)
+                                    }}
+                                >
+                                    <Form>
+                                        {/* Step 1 */}
+                                        {step === 1 && (
+                                            <div className="card-body">
+                                                <div className="row">
+                                                    <div className="col-4 d-none d-sm-block ttex">
+                                                        Firstname
+                                                    </div>
+                                                    <div className="col-md-8 col-sm-12">
+                                                        <div className="mb-3">
+                                                            <Field type="text" name="firstName" className="form-control" placeholder="john" />
+                                                            <ErrorMessage name="firstName" component="div" className="error-message" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="row">
+                                                    <div className="col-4 d-none d-sm-block ttex">
+                                                        Lastname
+                                                    </div>
+                                                    <div className="col-md-8 col-sm-12">
+                                                        <div className="mb-3">
+                                                            <Field type="text" name="lastName" className="form-control" id="" placeholder="Doe" />
+                                                            <ErrorMessage name="lastName" component="div" className="error-message" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="row">
+                                                    <div className="col-4 d-none d-sm-block ttex">
+                                                        Username
+                                                    </div>
+                                                    <div className="col-md-8 col-sm-12">
+                                                        <div className="mb-3">
+                                                            <Field type="text" name="userName" className="form-control" id="" placeholder="john121" />
+                                                            <ErrorMessage name="userName" component="div" className="error-message" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="row">
+                                                    <div className="col-4 d-none d-sm-block ttex">
+                                                        Email
+                                                    </div>
+                                                    <div className="col-md-8 col-sm-12">
+                                                        <div className="mb-3">
+                                                            <Field type="email" name="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
+                                                            <ErrorMessage name="email" component="div" className="error-message" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="row">
+                                                    <div className="col-4 d-none d-sm-block ttex">
+                                                        Phone Number
+                                                    </div>
+                                                    <div className="col-md-8 col-sm-12">
+                                                        <div className="mb-3">
+                                                            <Field type="text" validate={(value) => {
+                                                                const phoneNumberRegex = /^\d+$/;
+                                                                if (!phoneNumberRegex.test(value)) {
+                                                                    return 'Phone number must contain only numbers';
+                                                                }
+                                                            }} name="phoneNumber" className="form-control" placeholder="2348128282828" />
+                                                            <ErrorMessage name="phoneNumber" component="div" className="error-message" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="row">
+                                                    <div className="col-4 d-none d-sm-block ttex">
+                                                        Login password
+                                                    </div>
+                                                    <div className="col-md-8 col-sm-12">
+                                                        <div className="mb-3">
+                                                            <Field type="password" name="password" className="form-control" id="" placeholder="**********" />
+                                                            <ErrorMessage name="password" component="div" className="error-message" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )}
+                                        {/* Step 2 */}
+                                        {step === 2 && (
+                                            <div className="">
+                                                <div className="ttm">Enter Code</div>
+                                                <div className="ttm2">We’ve sent you the verification code to your mobile number</div>
+                                                <div align="center">
+                                                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }}>
+
+                                                        <OtpInput value={otp} onChange={handleChange} numInputs={4} inputStyle={{ height: "60px", width: "60px" }} separator={<span>-</span>} />
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )}
+
+                                        <div className="row">
+                                            <div className="col-md-5"></div>
+                                            <div className="col-md-7 d-flex justify-content-between align-items-center">
+                                                <span>Step {step} of 2</span>
+                                                <button type="submit" className="btn rg">
+                                                    {step < 2 ? (loading ? "Loading" : "Continue") : (loading ? "Loading" : "Submit")}
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </Form>
+                                </Formik>
                             </div>
                         </div>
                     </div>

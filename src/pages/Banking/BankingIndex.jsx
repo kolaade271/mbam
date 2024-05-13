@@ -1,13 +1,29 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import "../../css/LandingPage.css";
 import "../../css/Mainpage.css";
 import samplet from "../../images/samplet.png"
-
 import filter from "../../images/filter.png"
 import download from "../../images/download.png"
+import useReusableDataFetcher from '../../auth/refetch';
+import { LoadDataStorage } from '../../auth/connect';
 
 
 const BankingIndex = () => {
+    const [wallet,setWallet]= useState(false);
+    const { data: profile, loading, error, refreshData } = useReusableDataFetcher(['wallets', 'transactions']);
+    console.log(wallet)
+    const convert = (amount)=>{
+        return amount?.toLocaleString('en-US', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+          });
+          
+    }
+    useEffect(() => {
+        const walletload = LoadDataStorage("wallets");
+        setWallet(JSON.parse(walletload));
+     
+      }, []); 
 
     return (
         <div className="main">
@@ -18,7 +34,7 @@ const BankingIndex = () => {
                             <div className="row">
                                 <div className="col-md-6">
                                     <div className="hdtitle">
-                                        Member Account - MBJMC 31653694
+                                        Member Account - MBJMC {wallet?.accountNumber}
                                     </div>
                                 </div>
                                 <div className="col-md-6"  >
@@ -39,13 +55,13 @@ const BankingIndex = () => {
                         </div>
                         <div className="row balinfo">
                             <div className="col-md-3">Balance</div>
-                            <div className="col-md-3 green">3, 243, 500.00 FCFA</div>
+                            <div className="col-md-3 green">{convert(wallet?.balance)} {wallet?.currency}</div>
                             <div className="col-md-3">Available balance</div>
-                            <div className="col-md-3 green">3, 198, 300.00 FCFA</div>
+                            <div className="col-md-3 green">{convert(wallet?.balance)} {wallet?.currency}</div>
                         </div>
                         <div className="row balinf2">
                             <div className="col-md-3">Reserved amount</div>
-                            <div className="col-md-3 red">45, 200.00 FCFA</div>
+                            <div className="col-md-3 green">{convert(wallet?.cashBack)} {wallet?.currency}</div>
                         </div>
                     </div>
 
